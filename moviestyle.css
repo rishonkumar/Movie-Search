@@ -1,0 +1,66 @@
+body{
+    background-color: lightcoral;
+    margin: 0;
+}
+header{
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.h-box{
+    border: 0px;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+#movie-container{
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+#heading{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+#poster-container{
+    width: 50%;
+    height: 400px;
+    margin: auto;
+
+}
+#poster{
+    height: 100%;
+    width: 100%;
+}
+#title{
+    color: blueviolet;
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: oblique;
+}
+#name{
+    display: inline-block;
+    font-size: 3rem;
+    color: blueviolet;
+    font-weight: bold;
+    font-style: oblique;
+}
+.title-head{
+    text-align: right;
+    width: 30%;
+    font-size: 2rem;
+    color: blueviolet;
+    font-style: oblique;
+
+}
+.title-body{
+    text-align: left;
+    width: 60%;
+    font-size: 2rem;
+}

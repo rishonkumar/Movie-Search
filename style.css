@@ -1,0 +1,107 @@
+body{
+    margin: 0;
+    background-color: lightcoral;
+}
+header{
+    width: 100%;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.h-box{
+    font-size: 1.5rem;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 1px;
+    display: flex;
+
+}
+#search-container{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 50px;
+
+}
+#heading{
+    font-size: 5rem;
+    font-weight: 900px;
+}
+#input{
+    width: 80%;
+    font-size: 1.5rem;
+    padding: 5px 15px;
+    border: 0px;
+    border-radius: 5rem;
+}
+#search-btn{
+    margin-top: 10px;
+    width: 50%;
+    font-size: 3rem;
+    border-radius: 5rem;
+    background-color: lightcoral;
+    color: rgb(14, 14, 14);
+    border: 0px;
+    padding: 0px 5px;
+    cursor: pointer;
+}
+#search-btn:hover{
+    box-shadow: 0px 0px 2px 2px darkgrey;
+}
+/* ......................................ALL-MOVIES-CONTAINER........................................................ */
+#all-movies-container{
+    display: none;
+    width: 90%;
+    margin: auto;
+    min-height: 500px;
+}
+.movie-box{
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    min-height: 230px;
+    background-color: gray;
+
+}
+.movie-box:hover{
+    background-color: royalblue;
+}
+.movie-box div{
+    display: inline-block;
+}
+.poster{
+    height: 200px;
+    width: 20%;
+    margin-top: 13px;
+}
+.poster-img{
+    height: 100%;
+    width: 100%;
+}
+.movie-details{
+    vertical-align: top;
+    width: 70%;
+    height: 230px;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+.span-title{
+    color: black;
+    font-size: 1.5rem;
+}
+.span-detail{
+    color: lightgoldenrodyellow;
+    font-size: 1.3rem;
+}
+.favourites{
+    vertical-align: top;
+    width: 5%;
+    height: 40px;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+.heart-btn:hover{
+    color: darkred;
+}
