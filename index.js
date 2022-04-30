@@ -14,24 +14,24 @@ function searchMovie(e){
         var movies = responseJSON.Search;
         for(let movie of movies){
             console.log(movie.Title);
-            let mtitle = movie.Title;
-            let poster = movie.Poster;
-            let type = movie.Type;
-            let year = movie.Year;
-            let id = movie.imdbID;
-            mbox.innerHTML+= `<a href="movieinfo.html?id=${id}" target="_blank">
+            let title = movie.Title;
+            let movieYear = movie.Year;
+            let movieId = movie.imdbID;
+            let pst = movie.Poster;
+            let movieType = movie.Type;
+            mbox.innerHTML+= `<a href="movieinfo.html?id=${movieId}" target="_blank">
                                 <div class="movie-box">
                                    <div class="poster">
-                                       <img src="${poster}" class="poster-img">
+                                       <img src="${pst}" class="poster-img">
                                     </div>
                                     <div class="movie-details">
-                                       <p><span class="span-title">Movie-Name : </span><span class="span-detail">${mtitle}</span></p>
-                                       <p><span class="span-title">Release-Year : </span><span class="span-detail">${year}</span></p>
-                                       <p><span class="span-title">Movie-Type : </span><span class="span-detail">${type}</span></p>
-                                       <input type="text" id="movieID" value="${id}" style="display: none;"></input>
+                                       <p><span class="span-title">Movie-Name : </span><span class="span-detail">${title}</span></p>
+                                       <p><span class="span-title">Release-Year : </span><span class="span-detail">${movieYear}</span></p>
+                                       <p><span class="span-title">Movie-Type : </span><span class="span-detail">${movieType}</span></p>
+                                       <input type="text" id="movieID" value="${movieId}" style="display: none;"></input>
                                     </div>
                                </a>
-                                    <div class="favourites" title="${mtitle}" id="${id}" onclick="addfavmovie(${id})">
+                                    <div class="favourites" title="${title}" id="${movieId}" onclick="addfavmovie(${movieId})">
                                       <br><br><br><span class="heart-btn"><i class="fa-solid fa-heart"></i></i></span>
                                     </div>
                                 </div>`      
@@ -44,10 +44,10 @@ function searchMovie(e){
     xhrRequest.open('get',apiurl);
     xhrRequest.send();
 }
-function addfavmovie(id){
-    id.style.color = 'red';
-    var name = id.getAttribute("title");
-    var mid = id.getAttribute("id");
+function addfavmovie(movieId){
+    movieId.style.color = 'red';
+    var name = movieId.getAttribute("title");
+    var mid = movieId.getAttribute("id");
     localStorage.setItem(mid, name);
     var favList = document.getElementById('animation');
     favList.innerHTML+='<div class="f-movie" id+"'+mid+'"><p> '+name+' </p></div>';
